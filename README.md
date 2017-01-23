@@ -2,8 +2,16 @@
 This is a sample code for Simduino using the Adafruit Fona library.
 The logic for the SIM808 module is in fona.ino. All of the functions can be used to the your main arduino file (in this case, main.ino)
 
-#Functions
+#Prerequisites
+Make sure that the jumper wires are set to Software UART on the Simduino. 
 
+
+![logo](https://www.elecrow.com/wiki/images/c/cb/SIMduino_interface1.jpg "Simduino")
+
+Also, make sure that when you try to turn on the SIM808 module (the NET LED should light up to signify this), you have a good power supply. Otherwise, the GSM module will turn off. For more information, check the [Simduino product wiki] (https://www.elecrow.com/wiki/index.php?title=Elecrow_SIMduino_UNO%2BSIM808_GPRS/GSM_Board).
+
+
+#Functions
 setupFona() - initiate communication between the Arduino and the SIM808 module through SoftwareSerial. The debug logs should reveal whether the board is able to communicate to the SIM808 module. When the communication is successful, the GPS and GPRS modules are initialized. After initializing the GPS and GPRS modules, the ten (10) most recent messages saved on the SIM card are deleted. This is because the SIM808 module can only support a few saved messages on the SIM card. If we don't delete, the module behaves erratically.
 
 deleteMessages() - delete the ten (10) recently saved messages on the SIM card.
