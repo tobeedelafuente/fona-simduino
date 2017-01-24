@@ -1,5 +1,5 @@
 # fona-simduino
-This is a sample code for Simduino using the Adafruit Fona library.
+This is a sample code for Elecrow's SIMduino UNO+SIM808 GPRS/GSM Board using the Adafruit Fona library.
 The logic for the SIM808 module is in fona.ino. All of the functions can be used to the your main arduino file (in this case, main.ino)
 
 #Prerequisites
