@@ -1,4 +1,4 @@
-char phoneNumber[] = "+639XXXXXXXXX";
+String phoneNumber = "+639XXXXXXXXX";
 float latitude, longitude, speed_kph, heading, altitude;
 
 void setup() {
@@ -12,9 +12,11 @@ void loop() {
   if (!response.equals("")) {
     if(response.equals("!@gps")) {
       sendGPS();
-    } else if (response.equals("unauthorized")) {
-      Serial.println("Unauthorized usage of the system");
-      sendSMS(phoneNumber, "You are not authorized to use the system");
+    } else if (response.startsWith("unauthorized")) {
+      char *temp = strtok(&response[0], ",");
+      char *unauthorizedNumber = strtok(NULL, ",");
+
+      sendSMS(unauthorizedNumber, F("You are not authorized to use the system"));
     } else {
       Serial.print("Message: "); Serial.println(response);
     }
