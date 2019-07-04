@@ -11,7 +11,7 @@ Make sure that the jumper wires are set to Software UART on the Simduino.
 Also, make sure that when you try to turn on the SIM808 module (the NET LED should light up to signify this), you have a good power supply. Otherwise, the GSM module will turn off. For more information, check the [Simduino product wiki](https://www.elecrow.com/wiki/index.php?title=Elecrow_SIMduino_UNO%2BSIM808_GPRS/GSM_Board).
 
 # Optional
-As of now, Simduino does not have any mechanism to programatically turn on or off the GSM module. As an alternative, you can solder a wire on the KEY button and connect it to any pin. Check the ![link](https://www.dropbox.com/s/dxlhns1c5i8qw03/FullSizeRender.jpg "Simduino") for the picture (The wire is connected to Analog pin A5). 
+As of now, Simduino does not have any mechanism to programatically turn on or off the GSM module. As an alternative, you can solder a wire on the KEY button and connect it to any pin. Check the ![link](https://drive.google.com/file/d/1DeicUCUEfRc5JIkgSV_9X6LegQt_vMFy/view?usp=sharing "Simduino") for the picture (The wire is connected to Analog pin A5). 
 
 With this you do not need to press the KEY button anymore.
 
